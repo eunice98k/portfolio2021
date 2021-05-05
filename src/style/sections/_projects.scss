@@ -1,0 +1,35 @@
+.projects {
+    background: white;
+    color: #3a3a42;
+    &-body{
+        margin: auto 0;
+        padding: 5px;
+    }
+    &-col{
+        margin: 1rem 0;
+    }
+    &-row:nth-child(even){
+        .projects-body{
+            order:1;
+            padding-left: 1rem;
+        }
+        .projects-col{
+            order:2;
+        }
+    }
+    @include for-size(tab-portrait){
+        .projects-tilt{
+            box-shadow: 2px 3px 14px 2px #3a3a42;
+        }
+        .projects-row:nth-child(even){
+            .projects-body{
+                order:2;
+                padding-left: 2rem;
+            }
+            .projects-col{
+                order:1;
+            }
+        }
+    }
+
+}

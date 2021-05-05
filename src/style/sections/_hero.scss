@@ -1,0 +1,39 @@
+#hero {
+    min-height: 890px;
+    height: 890px;
+    display: flex;
+    align-items: center;
+    border-bottom: 0px;
+    background: white;
+    font-weight: 500;
+    color: #3a3a42;
+    padding: 0px 80px;
+    margin-bottom: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  
+    .hero-title {
+      font-size: 34px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      text-align: left;
+
+      @include for-size(tab-portrait) {
+        text-align: center;
+      }
+    }
+  
+    .hero-colour {
+        color: rgb(18, 173, 148);
+    }
+
+    .hero-next {
+        display: flex;
+        @include for-size(tab-portrait) {
+          justify-content: center;
+        }
+    }
+  }

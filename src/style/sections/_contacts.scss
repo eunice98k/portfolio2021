@@ -1,0 +1,26 @@
+.contact {
+    background: rgb(125, 196, 184);
+    color: #3a3a42;
+    position: relative;
+}
+.form_inputWrap{
+    display:flex;
+    flex-direction: column;
+}
+.form-input{
+    border: 1px solid;
+    border-radius: 15px;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-send{
+    width: 100%;
+    padding: .5rem 1rem;
+    border: 1px solid;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    &.hover{
+        background-color: white;
+    }
+}

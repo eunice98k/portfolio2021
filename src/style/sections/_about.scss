@@ -1,0 +1,38 @@
+.about {
+  background: rgb(125, 196, 184);
+  color: #3a3a42;
+
+  &-image {
+    width: 350px;
+    max-width: 350px;
+    max-height: 550px;
+    padding-bottom: 25px;
+  }
+  &-picture{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include for-size(tab-portrait) {
+      width: auto;
+      justify-content: center;
+    }
+  }
+  &-body {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    @include for-size(tab-portrait) {
+      justify-content: center;
+    }
+  }
+
+  &-next {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+  }
+}

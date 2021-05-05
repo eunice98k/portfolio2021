@@ -1,0 +1,19 @@
+@mixin for-size($range) {
+    // Phone (600px and down)
+    @if $range == phone {
+      @media (max-width: 600px) { @content; } 
+    }
+    // Tablet Portrait (600px ~ 900px)
+    @if $range == tab-portrait {
+      @media (max-width: 900px) { @content; }
+    }
+    // Tablet Landscape (900px ~ 1200px)
+    @if $range == tab-landscape {
+      @media (max-width: 1200px) { @content; }
+    }
+    // Big Desktop (1800px and up)
+    @if $range == desktop {
+      @media (min-width: 1800px) { @content; } 
+    }
+  }
+  

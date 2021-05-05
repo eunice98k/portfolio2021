@@ -1,0 +1,22 @@
+.about-button {
+    display: inline-block;
+    padding-bottom: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    animation: shake 1.5s;
+    animation-iteration-count: infinite;
+    transition: all 350ms ease 0s;
+    &:hover {
+        text-decoration: none;
+        animation-play-state: paused;
+    }
+  }
+  
+  @keyframes shake {
+    0% { transform: translateY(5px); }
+    50% { transform: translateY(0px); }
+    100% { transform: translateY(5px); }
+  }

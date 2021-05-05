@@ -15,24 +15,27 @@ function Footer({contacts}) {
     const footerList = contacts.socialMedia.map(({icon, url, hover}, i) => (
         <a href={url}>
             <div style={{color:hover}}>
-                <div className='icon'>
-                    {icon}
-                </div>
+                <i className={`fa fa-${icon}`} aria-hidden="true"></i>
             </div>
         </a>
     ))
     return (
         <footer className='footer'>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <Container>
-                <span className="back-to-top">
+                <div className="footer-go-top">
                     <Link to="hero" smooth duration={1000}>
-                        <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
+                        <i className="fa fa-angle-up" aria-hidden="true"></i>
                     </Link>
-                </span>
+                </div>
+                <div className='footer-social'>
+                    {footerList}
+                </div>
 
-            <div className='footer-social'>
-                {footerList} hii
-            </div>
+                <hr />
+                    <p className="footer-text">
+                    © {new Date().getFullYear()} Eunice Kim
+                </p>
             </Container>
         </footer>
     )

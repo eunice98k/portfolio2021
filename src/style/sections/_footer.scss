@@ -1,28 +1,32 @@
-.footer-social{
+.footer {
     background-color: #3a3a42;
+    color: white;
+    padding: 1.8rem 0;
+
+    &-social {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 38px;
+    }
     & a{
         color: invert($color: black);
-        padding-right: 1rem;
+        padding-right: 2rem;
     }
-    & svg{
-        width:2rem;
-        height:2rem;
-    }
-}
-.icon{
-    color:invert($color: black);
-    &:hover{
-        color:inherit;
-    }
-}
+    &-go-top {
+        display: flex;
+        justify-content: center;
+        font-size: 38px;
+        transition: all 0.3s ease-in;
+        cursor: pointer;
 
-.back-to-top i {
-    color: white;
-    margin: 1rem 0 18px;
-    transition: all 0.2s ease-in;
-    cursor: pointer;
-  
-    &:hover {
-      transform: translateY(-2px);
+        &:hover {
+            transform: translateY(-4px);
+        }
     }
-  }
+    &-icon {
+        &:hover{
+            color:inherit;
+        }
+    }
+}

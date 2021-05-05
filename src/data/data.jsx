@@ -56,17 +56,17 @@ export const contacts = {
     email:"eunice98k@gmail.com",
     socialMedia:[
         {
-            icon: FaGithub,
+            icon: 'github',
             url: "https://github.com/eunice98k",
             hover:"#000"
         },
         {
-            icon: FaLinkedin,
+            icon: 'linkedin',
             url: "https://www.linkedin.com/in/eunicekim98",
             hover:"#0077B5"
         },
         {
-            icon: FaInstagram,
+            icon: 'instagram',
             url: "https://www.instagram.com/eunicee.k/",
             hover:"#af1d97"
         },

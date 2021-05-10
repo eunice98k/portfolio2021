@@ -20,6 +20,10 @@ function About({about}) {
         }
     }, []);
 
+    const aboutSec = about.aboutme.map((index) => (
+        <p>{index}</p>
+    ))
+    
     return (
         <section id='about' className='about'>
             <Container>
@@ -34,7 +38,7 @@ function About({about}) {
                         </Col>
                         <Col sm={12} md={6}>
                             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="300px">
-                                <p className="about-body">{about.aboutme}</p>
+                                <p className="about-body">{aboutSec}</p>
                                 <a className='link-cbackground' href={about.resume}>RESUME</a>
                             </Fade>
                         </Col>

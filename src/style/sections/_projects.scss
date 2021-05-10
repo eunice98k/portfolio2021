@@ -17,17 +17,18 @@
             order:2;
         }
     }
+
     @include for-size(tab-portrait){
         .projects-tilt{
             box-shadow: 2px 3px 14px 2px #3a3a42;
         }
         .projects-row:nth-child(even){
             .projects-body{
-                order:2;
+                order:1;
                 padding-left: 2rem;
             }
             .projects-col{
-                order:1;
+                order:2;
             }
         }
     }

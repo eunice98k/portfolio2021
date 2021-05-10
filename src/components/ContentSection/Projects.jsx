@@ -53,7 +53,7 @@ function Projects({projects}) {
     return(
         <section className="projects">
             <Container fluid>
-                <Title title="My Projects" />
+                <Title title="PROJECTS" />
                 <div className="project-list">
                     {projList}
                 </div>

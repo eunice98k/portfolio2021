@@ -12,12 +12,11 @@ export const nav = {
 
 export const about = {
     image: AboutImg,
-    aboutme: [`
-        I am a senior Electrical Engineering student at the University of British Columbia. 
-        My interest in the application of technology to the medical field drew me in to joining the Biomedical option of my faculty.
-        The thought of impacting people's lives through technology interests me and motivates me to do so in my community.
-        As an engineering student, I am intrigued by complex design problems and attracted to solving real customer prolems with business justification.
-        I am passionate about building excellent software that improves the lives of those around me.`
+    aboutme: [
+        "Hello! My name is Eunice Kim.",
+        "I am a fourth year Electrical Engineering student at the University of British Columbia, intrigued by complex design problems and solving real customer prolems with business justification.",
+        "The thought of positively impacting people's lives through technology interests me and motivates me to become the engineer who does so in my community.",
+        "In my spare time, I enjoy spending time with my pets 🐶🐱, going on hikes ⛰, and yoga classes 🧘🏻‍♀️."
     ],
     resume: Resume
 }
@@ -36,10 +35,10 @@ export const projects = [
         id: 'Project2',
         image: Project2,
         title: "Freezer Monitoring Server",
-        technologies: "Linux OS, InfluxDB, CSS, Nagios",
+        technologies: "CSS, Grafana, InfluxDB, Nagios",
         live:"",
         source: "",
-        description:"In any hospital settings, it is critical that there is a reliable monitoring system for all the freezers containing important...."
+        description:"In a hospital settings, it is critical that there is a reliable monitoring system for all systems. In my time at St. Paul's Hospital, I was given the chance to design and develop a new freezer monitoring server. The key idea behind this project was to implement an easy monitoring and quick, reliable alerting system for the freezers containing organs, blood, etc. The temperature setting is critical in this setting and the slightest drop in the temperature can lead to a big aftermath. I main focus was to design something that people could check on a daily basis, quickly, without having to search for anything. This led me to choosing Nagios to act as the main server showing all system's state, InfluxDB to collect temperatures at all times, and Grafana to allow easy visualization of the freezers."
     },
     {
         id: 'Project3',
@@ -48,7 +47,7 @@ export const projects = [
         technologies: "C++, MATLAB, Simulink, SimulationX",
         live:"https://www.youtube.com/watch?v=1d6YJmkJxzE",
         source: "https://github.com",
-        description:"A 3.5 DOF Virtual Quality Control Robot was developed."
+        description:"A 3.5 DOF Virtual Quality Control Robot was developed. The Controls System utilizes Simulink to develop and simulate the overall system, MATLAB to tune the PID controller, C++ to implement the path plan and encoder logic. "
     }
 ]
 

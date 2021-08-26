@@ -14,8 +14,7 @@ export const about = {
     image: AboutImg,
     aboutme: [
         "Hello! My name is Eunice Kim.",
-        "I am a fourth year Electrical Engineering student at the University of British Columbia, intrigued by complex design problems and solving real customer prolems with business justification.",
-        "The thought of positively impacting people's lives through technology interests me and motivates me to become the engineer who does so in my community.",
+        "I am a senior at the University of British Columbia studying Electrical Engineering. I am intrigued by complex design problems and solving real customer prolems with business justification. The thought of positively impacting people's lives through technology motivates me to become the engineer who does so in my community.",
         "In my spare time, I enjoy spending time with my pets 🐶🐱, going on hikes ⛰, and yoga classes 🧘🏻‍♀️."
     ],
     resume: Resume

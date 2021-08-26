@@ -27,7 +27,7 @@ const Header = () => {
                         <span className="hero-colour">Eunice</span>
                         {' '}🐯
                         <br />
-                        I'm a Developer and Electrical Engineering student at UBC.
+                        I'm a Software Developer, Designer, and Electrical Engineering student at UBC.
                     </h1>
                 </Fade>
 

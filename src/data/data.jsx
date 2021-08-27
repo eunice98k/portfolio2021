@@ -22,6 +22,15 @@ export const about = {
 
 export const projects = [
     {
+        id: 'Project0',
+        image: Project1,
+        title: "Grafana Geomap Plugin",
+        technologies: "TypeScript, Golang, OpenSearch",
+        live:"https://grafana.com/blog/2021/08/05/grafana-8.1-released-new-geomap-and-annotations-panels-updated-plugin-management-and-more/",
+        source: "https://github.com/grafana/grafana/tree/main/public/app/plugins/panel/geomap",
+        description:"Grafana is one of the most popular open source monitoring platforms, allowing users to query, visualize, alert and analyze metrics from various data sources. You can create complex monitoring dashboards using interactive query builders, as well as personalize and extend the Grafana experience through the use of plugins. One of the core plugins included out of the box with Grafana is the Elasticsearch data source plugin, enabling users to visualize metrics and logs stored in an Elasticsearch instance. During my internship at AWS, I was able to take part in finding a solution to provide users with a new Grafana Open Distro for Elasticsearch (ODFE) data source plugin which provides the core Elasticsearch plugin functionalities along with additional Pipe Processing Language (PPL) support as an alternative query syntax option to improve the user experience of querying data in Grafana."
+    },
+    {
         id: 'Project1',
         image: Project1,
         title: "Grafana PPL Support in Open Distro for Elasticsearch Plugin",

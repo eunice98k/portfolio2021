@@ -1,6 +1,6 @@
 import React from "react"
 import About from "../components/AboutSection/About"
-import Header from "../components/heroSection/Hero"
+import Header from "../components/HeroSection/Hero"
 import Projects from "../components/ContentSection/Projects"
 import Contact from "../components/ContactSection/Contacts"
 import Footer from "../components/FooterSection/Footer"

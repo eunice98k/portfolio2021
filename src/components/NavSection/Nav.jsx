@@ -1,8 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react';
-import {Link} from 'react-scroll';
-import {Container} from 'react-bootstrap'
+import React from 'react';
+import {Navbar, Nav, Container} from 'react-bootstrap'
+import { Link } from 'react-scroll';
 
-function Nav(){
+const Navigation = () => {
+  return (
+    <>
+      <Navbar collapseOnSelect fixed='top' expand='sm' bg='dark' variant='dark'>
+        <Container>
+          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse id='responsive-navbar-nav'>
+            <Nav>
+              <Link to='projects' className='about-button' smooth duration={1000}>Projects</Link>
+              <Nav.Link href='/'>Eunice</Nav.Link>
+              <Nav.Link href='#About'>About</Nav.Link>
+              <Nav.Link href='/Project'>Projects</Nav.Link>
+              <Nav.Link href='/Contact'>Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
+  )
+{/* 
     const [scroll, setScroll] = useState(null);
     const [fixed,setFixed] = useState(null);
 
@@ -54,7 +73,7 @@ function Nav(){
                 </div>
             </Container>
         </nav>
-    )
+    ) */}
 }
 
-export default Nav;
+export default Navigation;

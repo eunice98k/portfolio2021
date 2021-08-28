@@ -4,7 +4,7 @@ import Header from "../components/HeroSection/Hero"
 import Projects from "../components/ContentSection/Projects"
 import Contact from "../components/ContactSection/Contacts"
 import Footer from "../components/FooterSection/Footer"
-import Nav from "../components/NavSection/Nav"
+import Navigation from "../components/NavSection/Nav"
 import '../style/main.scss';
 import {nav, about, projects, contacts} from '../data/data'
 

@@ -30,21 +30,26 @@ function About({about}) {
                 <Title title="ABOUT ME"/>
                     <Row>
                         <Col sm={12} md={6}>
-                            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="300px">
+                            <Fade left={isDesktop} bottom={isMobile} duration={800} delay={300} distance="300px">
                                 <div className="about-picture">
                                     <img className="about-image" src={about.image} alt="profile"/>
                                 </div>
                             </Fade>
                         </Col>
                         <Col sm={12} md={6}>
-                            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="300px">
+                            <Fade left={isDesktop} bottom={isMobile} duration={800} delay={600} distance="300px">
                                 <p className="about-body">{aboutSec}</p>
                                 <a className='link-cbackground' href={about.resume}>RESUME</a>
                             </Fade>
                         </Col>
                     </Row>
-                    <p className="about-next">My Work</p>
-                    <Link to='projects' className='about-button' smooth duration={1000}>👇🏼</Link>
+                    <Fade left={isDesktop} bottom={isMobile} duration={800} delay={800} distance="300px">
+                        <br />
+                        <br />
+                        <p className="about-next">My Work</p>
+                        <Link to='projects' className='about-button' smooth duration={1000}>👇🏼</Link>
+                    </Fade>
+                    
             </Container>
         </section>
     )

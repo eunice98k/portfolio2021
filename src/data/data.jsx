@@ -2,6 +2,7 @@ import React from 'react';
 import {FaGithub,FaInstagram,FaLinkedin} from 'react-icons/fa'
 import Resume from '../downloads/resume2021.pdf';
 import AboutImg from '../images/about.png';
+import Project0 from '../images/geomap.png';
 import Project1 from '../images/odfe.png';
 import Project2 from '../images/HLI.png';
 import Project3 from '../images/scara.gif';
@@ -14,8 +15,8 @@ export const about = {
     image: AboutImg,
     aboutme: [
         "Hello! My name is Eunice Kim.",
-        "I am a senior at the University of British Columbia studying Electrical Engineering. I am intrigued by complex design problems and solving real customer prolems with business justification. The thought of positively impacting people's lives through technology motivates me to become the engineer who does so in my community.",
-        "In my spare time, I enjoy spending time with my pets 🐶🐱, going on hikes ⛰, and yoga classes 🧘🏻‍♀️."
+        "I am a senior Electrical Engineering student at the University of British Columbia. I am intrigued by complex design problems and solving real customer prolems with business justification. The thought of positively impacting people's lives through technology is what motivates me to become the engineer who does so in my community.",
+        "In my spare time, I enjoy spending time with my pets 🐶🐱, going on hikes ⛰, and doing pilates 🧘🏻‍♀️."
     ],
     resume: Resume
 }
@@ -23,12 +24,12 @@ export const about = {
 export const projects = [
     {
         id: 'Project0',
-        image: Project1,
-        title: "Grafana Geomap Plugin",
+        image: Project0,
+        title: "Grafana Geomap Panel Plugin",
         technologies: "TypeScript, Golang, OpenSearch",
-        live:"https://grafana.com/blog/2021/08/05/grafana-8.1-released-new-geomap-and-annotations-panels-updated-plugin-management-and-more/",
+        live:"https://aws.amazon.com/blogs/opensource/building-the-geomap-plugin-for-grafana-8-1/",
         source: "https://github.com/grafana/grafana/tree/main/public/app/plugins/panel/geomap",
-        description:"Grafana is one of the most popular open source monitoring platforms, allowing users to query, visualize, alert and analyze metrics from various data sources. You can create complex monitoring dashboards using interactive query builders, as well as personalize and extend the Grafana experience through the use of plugins. One of the core plugins included out of the box with Grafana is the Elasticsearch data source plugin, enabling users to visualize metrics and logs stored in an Elasticsearch instance. During my internship at AWS, I was able to take part in finding a solution to provide users with a new Grafana Open Distro for Elasticsearch (ODFE) data source plugin which provides the core Elasticsearch plugin functionalities along with additional Pipe Processing Language (PPL) support as an alternative query syntax option to improve the user experience of querying data in Grafana."
+        description:"Geomap is a new core plugin introduced in Grafana 8.1, allowing you to visualize geospatial data. You can customize the world map, configure various overlays, and refine map settings to focus on the important location-based characteristics of data. The focus of my project was to design and build the Geomap plugin and contribute the plugin to the open source Grafana project. I worked closely with Grafana Labs to collaborate on the design and development of the new plugin."
     },
     {
         id: 'Project1',

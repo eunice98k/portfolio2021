@@ -18,11 +18,10 @@ function Projects({projects}) {
             setIsMobile(false);
         }
     }, []);
-
-    const projList = projects.map(({id, image, title, technologies, live, source, description}, i) => (
+    var projList = projects.map(({id, image, title, technologies, live, source, description}, i) => (
         <Row className='projects-row' key={id}>
             <Col className='projects-col' sx={6}>
-                <Fade left={i%2===0} right={i%2!==0 } delay={500} duration={1500}>
+                <Fade left={i%2===0} right={i%2!==0 } delay={500} duration={1000}>
                     <Tilt className="projects-tilt"
                         options={{
                             reverse:        false,
@@ -40,7 +39,7 @@ function Projects({projects}) {
                 </Fade>
             </Col>
             <Col className='projects-body' sx={6}>
-                <Fade right={i%2===0} left={i%2!==0} delay={500} duration={1800}>
+                <Fade right={i%2===0} left={i%2!==0} delay={1000} duration={1000}>
                     <h4>{title}</h4>
                     <p>{description}</p>
                     <p>Technologies: <i>{technologies}</i></p>
@@ -50,6 +49,40 @@ function Projects({projects}) {
             </Col>
         </Row>
     ))
+    if (isMobile) {
+        projList = projects.map(({id, image, title, technologies, live, source, description}, i) => (
+            <Row className='projects-row' key={id}>
+                <Row className='projects-row' sx={6}>
+                    <Fade left={i%2===0} right={i%2!==0 } delay={500} duration={1000}>
+                        <Tilt className="projects-tilt"
+                            options={{
+                                reverse:        false,
+                                max:            8,
+                                perspective:    1000,
+                                scale:          1,
+                                speed:          300,
+                                transition:     true,
+                                reset:          true,
+                                easing:         "cubic-bezier(.03,.98,.52,.99)",
+                            }}
+                        >
+                            <img width='100%' height='100%' src={image} alt="img"/>
+                        </Tilt>
+                    </Fade>
+                </Row>
+                <Row className='projects-row' sx={6}>
+                    <Fade right={i%2===0} left={i%2!==0} delay={1000} duration={1000}>
+                        <h4>{title}</h4>
+                        <p>{description}</p>
+                        <p>Technologies: <i>{technologies}</i></p>
+                        {source && <a href={source} className="link-wbackground">Source Code</a>}
+                        {live && <a href={live} className="link-wbackground">See Live</a>}
+                    </Fade>
+                </Row>
+            </Row>
+        ))
+    }
+
     return(
         <section className="projects">
             <Container fluid>

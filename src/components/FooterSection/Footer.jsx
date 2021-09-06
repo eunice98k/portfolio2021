@@ -3,15 +3,6 @@ import { Container } from 'react-bootstrap'
 import { Link } from 'react-scroll';
 
 function Footer({contacts}) {
-    const social = contacts.socialMedia.map((item) =>
-        <a href={item.url}>
-            <div style={{color:item.hover}}>
-                <div className='icon'>
-                    {item.icon}
-                </div>
-            </div>
-        </a>
-    )
     const footerList = contacts.socialMedia.map(({icon, url, hover}, i) => (
         <a href={url}>
             <div style={{color:hover}}>

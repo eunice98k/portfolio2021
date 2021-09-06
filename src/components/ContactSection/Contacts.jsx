@@ -9,8 +9,6 @@ function Contact({contacts}) {
         const body = message.target["body"].value;
         const firstName = message.target["firstName"].value;
         const lastName = message.target["lastName"].value;
-        console.log(body);
-        console.log(firstName);
         window.location.href = `mailto:${contacts.email}?body=${ encodeURIComponent(message)}`;
     }
     

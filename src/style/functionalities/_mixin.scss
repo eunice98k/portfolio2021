@@ -5,7 +5,7 @@
     }
     // Tablet Portrait (600px ~ 900px)
     @if $range == tab-portrait {
-      @media (max-width: 900px) { @content; }
+      @media (max-width: 950px) { @content; }
     }
     // Tablet Landscape (900px ~ 1200px)
     @if $range == tab-landscape {

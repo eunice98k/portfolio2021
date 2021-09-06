@@ -1,38 +1,84 @@
+// .about {
+//   color: #3a3a42;
+//   font-family: 'Kaisei HarunoUmi', serif;
+//   height: 730px;
+//   &-image {
+//     width: 350px;
+//     max-width: 350px;
+//     max-height: 550px;
+//     padding-bottom: 25px;
+//     padding-top: 25px;
+//   }
+//   &-picture{
+//     display: flex;
+//     height: 100%;
+//     align-items: center;
+//     justify-content: flex-start;
+
+//     @include for-size(tab-portrait) {
+//       width: auto;
+//       justify-content: center;
+//     }
+//   }
+//   &-body {
+//     font-size: 18px;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     padding-top: 85px;
+//     @include for-size(tab-portrait) {
+//       justify-content: center;
+//     }
+//   }
+
+//   &-next {
+//     font-size: 18px;
+//     display: flex;
+//     justify-content: center;
+//   }
+// }
 .about {
-  background: rgb(125, 196, 184);
+  font-family: 'Kaisei HarunoUmi', serif;
+  background: white;
   color: #3a3a42;
-
   &-image {
-    width: 350px;
-    max-width: 350px;
-    max-height: 550px;
-    padding-bottom: 25px;
+    width: 400px;
+    max-width: 400px;
+    max-height: 600px;
+    padding-bottom: 30px;
   }
-  &-picture{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: flex-start;
-
-    @include for-size(tab-portrait) {
-      width: auto;
-      justify-content: center;
+  &-col{
+      margin: 1rem 0;
+  }
+  &-row {
+      margin: 8px -16px;
     }
-  }
-  &-body {
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     
-    @include for-size(tab-portrait) {
-      justify-content: center;
+    /* Add padding BETWEEN each column */
+  &-row,
+  &-row > &-column {
+      padding: 8px;
     }
+  &-column {
+      float: left;
+      width: 50%; 
   }
-
-  &-next {
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
+  /* Clear floats after rows */ 
+  &-row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  
+  /* Content */
+  &-content {
+      background-color: white;
+      padding: 4px;
+  }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @include for-size(tab-portrait) {
+      &-column {
+      width: 100%;
+      }
   }
 }

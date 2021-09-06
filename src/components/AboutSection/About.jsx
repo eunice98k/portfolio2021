@@ -25,11 +25,11 @@ function About({about}) {
     ))
     
     return (
-        <section id='about' className='about'>
+        <main id='about' className='about-row'>
             <Container>
                 <Title title="ABOUT ME"/>
-                    <Row>
-                        <Col sm={12} md={6}>
+                    <div className='about-content'>
+                        {/* <Col sm={12} md={6}>
                             <Fade left={isDesktop} bottom={isMobile} duration={800} delay={300} distance="300px">
                                 <div className="about-picture">
                                     <img className="about-image" src={about.image} alt="profile"/>
@@ -41,17 +41,21 @@ function About({about}) {
                                 <p className="about-body">{aboutSec}</p>
                                 <a className='link-cbackground' href={about.resume}>RESUME</a>
                             </Fade>
-                        </Col>
-                    </Row>
-                    <Fade left={isDesktop} bottom={isMobile} duration={800} delay={800} distance="300px">
-                        <br />
-                        <br />
-                        <p className="about-next">My Work</p>
-                        <Link to='projects' className='about-button' smooth duration={1000}>👇🏼</Link>
-                    </Fade>
-                    
+                        </Col> */}
+                        <div className='about-column'>
+                            <Fade left={isDesktop} bottom={isMobile} duration={800} delay={300} distance="300px">
+                                <img className="about-image" src={about.image} alt="profile"/>
+                            </Fade>
+                        </div>
+                        <div className='about-column'>
+                            <Fade left={isDesktop} bottom={isMobile} duration={800} delay={600} distance="300px">
+                                <p className="about-body">{aboutSec}</p>
+                                <a className='link-cbackground' href={about.resume}>RESUME</a>
+                            </Fade>
+                        </div>
+                    </div>
             </Container>
-        </section>
+        </main>
     )
 }
 export default About;

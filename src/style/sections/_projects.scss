@@ -1,36 +1,47 @@
 .projects {
+    font-family: 'Kaisei HarunoUmi', serif;
     background: white;
     color: #3a3a42;
-    &-body{
-        margin: auto 0;
-        padding: 5px;
-    }
+
     &-col{
         margin: 1rem 0;
     }
-    &-row:nth-child(even){
-        .projects-body{
-            order:1;
-            padding-left: 1rem;
-        }
-        .projects-col{
-            order:2;
+    &-row {
+        margin: 8px -16px;
+      }
+      
+      /* Add padding BETWEEN each column */
+    &-row,
+    &-row > &-column {
+        padding: 8px;
+      }
+    &-column {
+        float: left;
+        width: 33%; 
+    }
+    /* Clear floats after rows */ 
+    &-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* Content */
+    &-content {
+        background-color: white;
+        padding: 4px;
+    }
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @include for-size(tab-portrait) {
+        &-column {
+        width: 50%;
         }
     }
-
-    @include for-size(tab-portrait){
-        .projects-tilt{
-            box-shadow: 2px 3px 14px 2px #3a3a42;
-        }
-        .projects-row:nth-child(even){
-            .projects-body{
-                order:1;
-                padding-left: 2rem;
-            }
-            .projects-col{
-                order:2;
-            }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @include for-size(phone) {
+        &-column {
+        width: 100%;
         }
     }
-
 }

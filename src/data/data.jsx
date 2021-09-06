@@ -5,7 +5,7 @@ import AboutImg from '../images/about.png';
 import Project0 from '../images/geomap.png';
 import Project1 from '../images/odfe.png';
 import Project2 from '../images/HLI.png';
-import Project3 from '../images/scara.gif';
+import Project3 from '../images/scara.png';
 
 export const nav = {
     logo:"Eunice Kim"
@@ -29,16 +29,16 @@ export const projects = [
         technologies: "TypeScript, Golang, OpenSearch",
         live:"https://aws.amazon.com/blogs/opensource/building-the-geomap-plugin-for-grafana-8-1/",
         source: "https://github.com/grafana/grafana/tree/main/public/app/plugins/panel/geomap",
-        description:"Geomap is a new core plugin introduced in Grafana 8.1, allowing you to visualize geospatial data. You can customize the world map, configure various overlays, and refine map settings to focus on the important location-based characteristics of data. The focus of my project was to design and build the Geomap plugin and contribute the plugin to the open source Grafana project. I worked closely with Grafana Labs to collaborate on the design and development of the new plugin."
-    },
+        description:"Geomap is a new core plugin introduced in Grafana 8.1, allowing users to visualize geospatial data. Users can customize the world map, configure various overlays, and refine map settings to focus on the important location-based characteristics of data. During my internship at AWS, I collaborated with Grafana Labs to design and build this Geomap plugin and contribute the plugin to the open source Grafana project."
+        },
     {
         id: 'Project1',
         image: Project1,
-        title: "Grafana PPL Support in Open Distro for Elasticsearch Plugin",
+        title: "Grafana PPL Support in OpenSearch Plugin",
         technologies: "TypeScript, Golang, Elasticsearch, PPL",
-        live:"https://grafana.com/grafana/plugins/grafana-es-open-distro-datasource/#:~:text=Open%20Distro%20for%20Elasticsearch%20Grafana,log%20events%20stored%20in%20Elasticsearch.",
+        live:"https://grafana.com/grafana/plugins/grafana-opensearch-datasource/",
         source: "https://github.com/grafana/open-distro-for-elasticsearch-grafana-datasource",
-        description:"Grafana is one of the most popular open source monitoring platforms, allowing users to query, visualize, alert and analyze metrics from various data sources. You can create complex monitoring dashboards using interactive query builders, as well as personalize and extend the Grafana experience through the use of plugins. One of the core plugins included out of the box with Grafana is the Elasticsearch data source plugin, enabling users to visualize metrics and logs stored in an Elasticsearch instance. During my internship at AWS, I was able to take part in finding a solution to provide users with a new Grafana Open Distro for Elasticsearch (ODFE) data source plugin which provides the core Elasticsearch plugin functionalities along with additional Pipe Processing Language (PPL) support as an alternative query syntax option to improve the user experience of querying data in Grafana."
+        description:"During my internship at AWS, I was able to take part in finding a solution to provide users with a new Grafana Open Distro for Elasticsearch (ODFE) data source plugin which provides the core Elasticsearch plugin functionalities along with additional Pipe Processing Language (PPL) support as an alternative query syntax option to improve the user experience of querying data in Grafana."
     },
     {
         id: 'Project2',
@@ -55,7 +55,7 @@ export const projects = [
         title: "Control System of a SCARA Robot",
         technologies: "C++, MATLAB, Simulink, SimulationX",
         live:"https://www.youtube.com/watch?v=1d6YJmkJxzE",
-        source: "https://github.com",
+        source: "",
         description:"A 3.5 DOF Virtual Quality Control Robot was developed. The Controls System utilizes Simulink to develop and simulate the overall system, MATLAB to tune the PID controller, C++ to implement the path plan and encoder logic. "
     }
 ]

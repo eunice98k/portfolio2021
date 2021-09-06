@@ -1,79 +1,26 @@
 import React from 'react';
 import {Navbar, Nav, Container} from 'react-bootstrap'
 import { Link } from 'react-scroll';
+import Resume from '../../downloads/resume2021.pdf';
 
 const Navigation = () => {
   return (
-    <>
-      <Navbar collapseOnSelect fixed='top' expand='sm' bg='dark' variant='dark'>
-        <Container>
+    <header>
+      <Container>
+        <Navbar collapseOnSelect fixed='top' expand='md' bg='light' variant='light'>
+          <Navbar.Brand href="/">E.</Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav>
-              <Link to='projects' className='about-button' smooth duration={1000}>Projects</Link>
-              <Nav.Link href='/'>Eunice</Nav.Link>
-              <Nav.Link href='#About'>About</Nav.Link>
-              <Nav.Link href='/Project'>Projects</Nav.Link>
-              <Nav.Link href='/Contact'>Contact</Nav.Link>
+              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/projects">Projects</Nav.Link>
+              <a className="nav-link" rel="noopener noreferrer" href={Resume} target="_blank">Resume</a>
             </Nav>
           </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+        </Navbar>
+      </Container>
+    </header>
   )
-{/* 
-    const [scroll, setScroll] = useState(null);
-    const [fixed,setFixed] = useState(null);
-
-    useEffect(()=>{
-        const target = () => {
-          if(scroll && window.scrollY>scroll) {
-            setFixed(true);
-          }
-          else setFixed(false);
-        };
-        window.addEventListener('scroll',target) 
-        return ()=> window.removeEventListener('scroll',target)
-    }, [])
-
-    const navbar = useRef(null);
-    const links = useRef(null);
-    useEffect(()=>{
-        setScroll(navbar.current.getBoundingClientRect().top+ window.scrollY)
-    },[navbar])
-    
-    const onClick = (item) =>{
-        links.current.classList.toggle('show');
-    }
-    const onHide = (item) =>{
-        links.current.classList.remove('show');
-    }
-
-    return (
-        <nav >
-            <Container>
-                <div>
-                    <Link to='hero' className='nav-main' smooth duration={1000}>
-                    Eunice Kim
-                    </Link>
-                    <div  className="nav__links">
-                        <ul className='nav__ul'>
-                          <li>
-                            <Link activeClass="nav__item--active" to="about"  className="nav__item" spy={true} duration={500} smooth={true} offset={-50}>about</Link>
-                          </li>
-                          <li>
-                            <Link activeClass="nav__item--active" to="projects"  className="nav__item" spy={true} duration={500} smooth={true} offset={-50}>projects</Link>
-                          </li>
-                          <li>
-                            <Link activeClass="nav__item--active" to="contact"  className="nav__item" spy={true} duration={500} smooth={true} offset={-50}>contact</Link>
-                          </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </Container>
-        </nav>
-    ) */}
 }
 
 export default Navigation;

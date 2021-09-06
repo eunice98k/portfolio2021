@@ -1,7 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import Fade from 'react-reveal/Fade';
-import { Link } from 'react-scroll';
+import { Router, Link } from 'react-scroll';
 import { Container } from 'react-bootstrap';
+import IntroImg from '../../images/intro.png';
 
 const Header = () => {
     const [isDesktop, setIsDesktop] = useState(false);
@@ -21,24 +22,30 @@ const Header = () => {
     return (
         <section id="hero">
             <Container>
-                <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-                    <h1 className="hero-title">
-                        Hi, I'm{' '} 
-                        <span className="hero-colour">Eunice</span>
-                        {' '}🐯
-                        <br />
-                        I'm a senior Electrical Engineering student at the University of British Columbia
-                        interested in Software, Observability, and all Open Source Projects!
-                    </h1>
+                <Fade left>
+                    <img className="hero-image" src={IntroImg} alt="profile"/>
                 </Fade>
+                <div className="hero-name">
+                    <Fade right>
+                        <p>Eunice Kim</p>
+                    </Fade>
+                </div>
+                <div className="hero-sub">
+                    <Fade right>
+                        <p>
+                            Senior Electrical Engineering student at the University of British Columbia
+                            interested in Software Development, Observability, and Open Source Projects.
+                        </p>
+                    </Fade>
+                </div>
 
-                <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+           
+                <Fade right={isDesktop} bottom={isMobile}>
                     <h1 className="hero-next">
-                        <span className="link-wbackground">
-                            <Link to="about" smooth duration={1000}>Learn More</Link>
-                        </span>
+                        <a className="link-wbackground" href="/about">Learn More</a>
                     </h1> 
                 </Fade>
+
             </Container>
         </section>
     );
